@@ -1,10 +1,10 @@
 site_name: kuantian.zhang's Web
 site_description: kuantian.zhang 的个人博客
 site_author: kuantian.zhang
-site_url: https://zhangkuantian.github.io/
+site_url: https://kuantian-zhang.github.io/
 
-repo_url: https://github.com/zhangkuantian/zhangkuantian.github.io
-repo_name: zhangkuantian/blog
+repo_url: https://github.com/kuantian-zhang/kuantian-zhang.github.io
+repo_name: kuantian-zhang/blog
 
 theme:
   name: material
@@ -32,7 +32,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/zhangkuantian
+      link: https://github.com/kuantian-zhang
       name: AkibaArisa on GitHub
     - icon: fontawesome/brands/steam
       link: https://steamcommunity.com/id/akibaarisa
@@ -45,7 +45,6 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - javascripts/waifu/autoload.js  # 十分耗时，放在最后加载
 
 plugins:
   - search
