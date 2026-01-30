@@ -5,7 +5,6 @@ tags:
   - Ray on k8s
   - k8s
 ---
-## Ray on k8s 在部署模版
 
 ### 使用 aliyun spot eci 启动 Ray Worker
 ```yaml
