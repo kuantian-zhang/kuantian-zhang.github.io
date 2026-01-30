@@ -1,4 +1,8 @@
 ## Ray on k8s 在 Data-ENG 中的应用
+tags:
+  - ray on k8s
+  - eci
+  - k8s
 
 ### 使用 aliyun spot eci 启动 Ray Worker
 ```yaml
