@@ -1,8 +1,11 @@
-## Ray on k8s 在 Data-ENG 中的应用
+---
+title: Ray on k8s 在部署模版
 tags:
-  - ray on k8s
-  - eci
+  - Ray
+  - Ray on k8s
   - k8s
+---
+## Ray on k8s 在部署模版
 
 ### 使用 aliyun spot eci 启动 Ray Worker
 ```yaml
