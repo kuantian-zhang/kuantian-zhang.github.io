@@ -12,13 +12,13 @@
         <meta name="author" content="kuantian.zhang">
       
       
-        <link rel="canonical" href="https://kuantian-zhang.github.io/blog/%E6%9D%82%E6%96%87/Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/">
+        <link rel="canonical" href="https://kuantian-zhang.github.io/blog/%E6%9D%82%E6%96%87/sls_log_query/">
       
       
-        <link rel="prev" href="../../starrocks/unified-catalog%20%E5%85%83%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/">
+        <link rel="prev" href="../redis%E4%B8%8D%E9%87%8A%E6%94%BE%E5%AF%BC%E8%87%B4%E7%9A%84%E5%86%85%E5%AD%98%E5%8D%A0%E6%BB%A1/">
       
       
-        <link rel="next" href="../DuckDB/">
+        <link rel="next" href="../timestamp%20%E5%BC%95%E8%B5%B7%E7%9A%84%E6%83%A8%E6%A1%88/">
       
       
       <link rel="icon" href="../../../assets/favicon.webp">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Could not resolve host: mirrorlist.centos.org; Unknown error - kuantian.zhang's Web</title>
+        <title>sls log query - kuantian.zhang's Web</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#could-not-resolve-host-mirrorlistcentosorg-unknown-error" class="md-skip">
+        <a href="#sls-log-query" class="md-skip">
           跳转至
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Could not resolve host: mirrorlist.centos.org; Unknown error
+              sls log query
             
           </span>
         </div>
@@ -1088,30 +1088,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Could not resolve host: mirrorlist.centos.org; Unknown error
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,35 +1100,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      解决办法
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1263,10 +1214,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../sls_log_query/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1275,6 +1235,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1357,23 +1318,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      解决办法
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1398,51 +1342,73 @@ as the main headline.
 
     
 
-    <h1 id="could-not-resolve-host-mirrorlistcentosorg-unknown-error">Could not resolve host: mirrorlist.centos.org; Unknown error<a class="headerlink" href="#could-not-resolve-host-mirrorlistcentosorg-unknown-error" title="Permanent link">&para;</a></h1>
-<p>最近在基于CentOS 7 打 Docker 包, 发现无论怎么替换 <code>CentOS-Base.repo</code> 都不生效，老是报错误:
-<div class="highlight"><pre><span></span><code>Loaded<span class="w"> </span>plugins:<span class="w"> </span>fastestmirror,<span class="w"> </span>ovl
-Loading<span class="w"> </span>mirror<span class="w"> </span>speeds<span class="w"> </span>from<span class="w"> </span>cached<span class="w"> </span>hostfile
-Could<span class="w"> </span>not<span class="w"> </span>retrieve<span class="w"> </span>mirrorlist<span class="w"> </span>http://mirrorlist.centos.org?arch<span class="o">=</span>x86_64<span class="p">&amp;</span><span class="nv">release</span><span class="o">=</span><span class="m">7</span><span class="p">&amp;</span><span class="nv">repo</span><span class="o">=</span>sclo-rh<span class="w"> </span>error<span class="w"> </span>was
-<span class="m">14</span>:<span class="w"> </span>curl#6<span class="w"> </span>-<span class="w"> </span><span class="s2">&quot;Could not resolve host: mirrorlist.centos.org; 未知的错误&quot;</span>
+    <h1 id="sls-log-query">sls log query<a class="headerlink" href="#sls-log-query" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">aliyun.log</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">aliyun.log.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">AUTH_VERSION_4</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytz</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
 
 
-<span class="w"> </span>One<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>configured<span class="w"> </span>repositories<span class="w"> </span>failed<span class="w"> </span><span class="o">(</span>Unknown<span class="o">)</span>,
-<span class="w"> </span>and<span class="w"> </span>yum<span class="w"> </span>doesn<span class="s1">&#39;t have enough cached data to continue. At this point the only</span>
-<span class="s1"> safe thing yum can do is fail. There are a few ways to work &quot;fix&quot; this:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_sls_client</span><span class="p">(</span><span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou.log.aliyuncs.com&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s1">&#39;cn-hangzhou&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
-<span class="s1">     1. Contact the upstream for the repository and get them to fix the problem.</span>
+<span class="sd">    :param endpoint:</span>
+<span class="sd">    :param region:</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">access_key_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ALIBABA_CLOUD_ACCESS_KEY_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;xxx&#39;</span><span class="p">)</span>
+    <span class="n">access_key_secret</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ALIBABA_CLOUD_ACCESS_KEY_SECRET&#39;</span><span class="p">,</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">)</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">LogClient</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">access_key_id</span><span class="p">,</span> <span class="n">access_key_secret</span><span class="p">,</span> <span class="n">auth_version</span><span class="o">=</span><span class="n">AUTH_VERSION_4</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">client</span>
 
-<span class="s1">     2. Reconfigure the baseurl/etc. for the repository, to point to a working</span>
-<span class="s1">        upstream. This is most often useful if you are using a newer</span>
-<span class="s1">        distribution release than is supported by the repository (and the</span>
-<span class="s1">        packages for the previous distribution release still work).</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_pod_sls_log</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">logstore</span><span class="p">,</span> <span class="n">pod_name</span><span class="p">,</span> <span class="n">date_range</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dateFrom</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dateTo</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">page_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
-<span class="s1">     3. Run the command with the repository temporarily disabled</span>
-<span class="s1">            yum --disablerepo=&lt;repoid&gt; ...</span>
+<span class="sd">    :param project:</span>
+<span class="sd">    :param logstore:</span>
+<span class="sd">    :param pod_name:</span>
+<span class="sd">    :param date_range:</span>
+<span class="sd">    :param dateFrom:</span>
+<span class="sd">    :param dateTo:</span>
+<span class="sd">    :param page_size:</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">get_sls_client</span><span class="p">()</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;_pod_name_:</span><span class="si">{</span><span class="n">pod_name</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">fromTime</span> <span class="o">=</span> <span class="n">dateFrom</span> <span class="k">if</span> <span class="n">dateFrom</span> <span class="k">else</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s2">&quot;Asia/Shanghai&quot;</span><span class="p">))</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">date_range</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
 
-<span class="s1">     4. Disable the repository permanently, so yum won&#39;</span>t<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span>by<span class="w"> </span>default.<span class="w"> </span>Yum
-<span class="w">        </span>will<span class="w"> </span><span class="k">then</span><span class="w"> </span>just<span class="w"> </span>ignore<span class="w"> </span>the<span class="w"> </span>repository<span class="w"> </span><span class="k">until</span><span class="w"> </span>you<span class="w"> </span>permanently<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>it
-<span class="w">        </span>again<span class="w"> </span>or<span class="w"> </span>use<span class="w"> </span>--enablerepo<span class="w"> </span><span class="k">for</span><span class="w"> </span>temporary<span class="w"> </span>usage:
+    <span class="n">toTime</span> <span class="o">=</span> <span class="n">dateTo</span> <span class="k">if</span> <span class="n">dateTo</span> <span class="k">else</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s2">&quot;Asia/Shanghai&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
 
-<span class="w">            </span>yum-config-manager<span class="w"> </span>--disable<span class="w"> </span>&lt;repoid&gt;
-<span class="w">        </span>or
-<span class="w">            </span>subscription-manager<span class="w"> </span>repos<span class="w"> </span>--disable<span class="o">=</span>&lt;repoid&gt;
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;load sls log for </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2"> from </span><span class="si">%s</span><span class="s2"> to </span><span class="si">%s</span><span class="s2"> with page_size: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">logstore</span><span class="p">,</span> <span class="n">fromTime</span><span class="p">,</span> <span class="n">toTime</span><span class="p">,</span> <span class="n">page_size</span><span class="p">))</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">GetHistogramsRequest</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">project</span><span class="p">,</span> <span class="n">logstore</span><span class="o">=</span><span class="n">logstore</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">fromTime</span><span class="o">=</span><span class="n">fromTime</span><span class="p">,</span>
+                                   <span class="n">toTime</span><span class="o">=</span><span class="n">toTime</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_histograms</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="n">histograms</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">histograms</span>
+    <span class="n">histogram_items</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">histograms</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">histogram_items</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">page_size</span><span class="p">:</span>
+            <span class="n">request_</span> <span class="o">=</span> <span class="n">GetLogsRequest</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">logstore</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">fromTime</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">toTime</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">page_size</span><span class="p">,</span>
+                                      <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">response_</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_logs</span><span class="p">(</span><span class="n">request_</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">log</span> <span class="ow">in</span> <span class="n">response_</span><span class="o">.</span><span class="n">get_logs</span><span class="p">():</span>
+                <span class="n">items</span> <span class="o">=</span> <span class="n">log</span><span class="o">.</span><span class="n">get_contents</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">split</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">count</span> <span class="o">/</span> <span class="n">page_size</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------ </span><span class="si">%s</span><span class="s2"> ======= </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">split</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">split</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">request_</span> <span class="o">=</span> <span class="n">GetLogsRequest</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">logstore</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">fromTime</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">toTime</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">page_size</span><span class="p">,</span>
+                                          <span class="n">offset</span><span class="o">=</span><span class="n">page</span> <span class="o">*</span> <span class="n">page_size</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">response_</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_logs</span><span class="p">(</span><span class="n">request_</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">log</span> <span class="ow">in</span> <span class="n">response_</span><span class="o">.</span><span class="n">get_logs</span><span class="p">():</span>
+                    <span class="n">items</span> <span class="o">=</span> <span class="n">log</span><span class="o">.</span><span class="n">get_contents</span><span class="p">()</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;page: </span><span class="si">%s</span><span class="s2"> ------------ </span><span class="si">%s</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">items</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]))</span>
 
-<span class="w">     </span><span class="m">5</span>.<span class="w"> </span>Configure<span class="w"> </span>the<span class="w"> </span>failing<span class="w"> </span>repository<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>skipped,<span class="w"> </span><span class="k">if</span><span class="w"> </span>it<span class="w"> </span>is<span class="w"> </span>unavailable.
-<span class="w">        </span>Note<span class="w"> </span>that<span class="w"> </span>yum<span class="w"> </span>will<span class="w"> </span>try<span class="w"> </span>to<span class="w"> </span>contact<span class="w"> </span>the<span class="w"> </span>repo.<span class="w"> </span>when<span class="w"> </span>it<span class="w"> </span>runs<span class="w"> </span>most<span class="w"> </span>commands,
-<span class="w">        </span>so<span class="w"> </span>will<span class="w"> </span>have<span class="w"> </span>to<span class="w"> </span>try<span class="w"> </span>and<span class="w"> </span>fail<span class="w"> </span>each<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="o">(</span>and<span class="w"> </span>thus.<span class="w"> </span>yum<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>be<span class="w"> </span>much
-<span class="w">        </span>slower<span class="o">)</span>.<span class="w"> </span>If<span class="w"> </span>it<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>very<span class="w"> </span>temporary<span class="w"> </span>problem<span class="w"> </span>though,<span class="w"> </span>this<span class="w"> </span>is<span class="w"> </span>often<span class="w"> </span>a<span class="w"> </span>nice
-<span class="w">        </span>compromise:
 
-<span class="w">            </span>yum-config-manager<span class="w"> </span>--save<span class="w"> </span>--setopt<span class="o">=</span>&lt;repoid&gt;.skip_if_unavailable<span class="o">=</span><span class="nb">true</span>
-
-Cannot<span class="w"> </span>find<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>baseurl<span class="w"> </span><span class="k">for</span><span class="w"> </span>repo:<span class="w"> </span>centos-sclo-rh/x86_64
-</code></pre></div></p>
-<p>后来在 <a href="https://serverfault.com/questions/1161816/mirrorlist-centos-org-no-longer-resolve">https://serverfault.com/questions/1161816/mirrorlist-centos-org-no-longer-resolve</a> 的帮助下，最后解决了，发出来记录以下，避免下次找不到解决办法了</p>
-<h2 id="_1">解决办法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-i<span class="w"> </span>s/mirror.centos.org/vault.centos.org/g<span class="w"> </span>/etc/yum.repos.d/*.repo
-sed<span class="w"> </span>-i<span class="w"> </span>s/^#.*baseurl<span class="o">=</span>http/baseurl<span class="o">=</span>http/g<span class="w"> </span>/etc/yum.repos.d/*.repo
-sed<span class="w"> </span>-i<span class="w"> </span>s/^mirrorlist<span class="o">=</span>http/#mirrorlist<span class="o">=</span>http/g<span class="w"> </span>/etc/yum.repos.d/*.repo
+<span class="n">load_pod_sls_log</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="s2">&quot;k8s-log-xx&quot;</span><span class="p">,</span> <span class="n">logstore</span><span class="o">=</span><span class="s2">&quot;k8s-stdout&quot;</span><span class="p">,</span> <span class="n">pod_name</span><span class="o">=</span><span class="s2">&quot;airflow-task-sla-xxx-2-dxm9q&quot;</span><span class="p">)</span>
 </code></pre></div>
 
     <!-- Last update of source file -->
@@ -1470,7 +1436,7 @@ sed<span class="w"> </span>-i<span class="w"> </span>s/^mirrorlist<span class="o
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-07-17 11:32:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2026-03-18 08:21:08</span>
   </span>
 
     
@@ -1480,7 +1446,7 @@ sed<span class="w"> </span>-i<span class="w"> </span>s/^mirrorlist<span class="o
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-07-17 11:32:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2026-03-18 08:21:08</span>
   </span>
 
     
@@ -1564,7 +1530,7 @@ sed<span class="w"> </span>-i<span class="w"> </span>s/^mirrorlist<span class="o
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../starrocks/unified-catalog%20%E5%85%83%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Unified catalog 元数据缓存引发的惨案">
+          <a href="../redis%E4%B8%8D%E9%87%8A%E6%94%BE%E5%AF%BC%E8%87%B4%E7%9A%84%E5%86%85%E5%AD%98%E5%8D%A0%E6%BB%A1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Redis不释放导致的内存占满">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1574,20 +1540,20 @@ sed<span class="w"> </span>-i<span class="w"> </span>s/^mirrorlist<span class="o
                 上一页
               </span>
               <div class="md-ellipsis">
-                Unified catalog 元数据缓存引发的惨案
+                Redis不释放导致的内存占满
               </div>
             </div>
           </a>
         
         
           
-          <a href="../DuckDB/" class="md-footer__link md-footer__link--next" aria-label="下一页: DuckDB load plugin 使用不当导致的任务集体失败">
+          <a href="../timestamp%20%E5%BC%95%E8%B5%B7%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-footer__link md-footer__link--next" aria-label="下一页: Timestamp 引起的惨案">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                DuckDB load plugin 使用不当导致的任务集体失败
+                Timestamp 引起的惨案
               </div>
             </div>
             <div class="md-footer__button md-icon">
